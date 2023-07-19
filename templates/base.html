@@ -9,8 +9,10 @@
 
 <body>
   <header>
-    <a href="{% url 'create_view' %}">Add a Snack</a>
-    <a href="{% url 'list_view' %}">List of Snacks</a>
+    <ul>
+      <a href="{% url 'create_view' %}">Add a Snack</a>
+      <a href="{% url 'list_view' %}">List of Snacks</a>
+    </ul>
   </header>
   <main>
     {% block content %}

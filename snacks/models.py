@@ -7,8 +7,8 @@ class Snack(models.Model):
   description = models.TextField(default='generic snack')
   purchaser = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
   
-  def get_absolute_url(self):
-    return reverse('detail_view', args=[str(self.id)])
-
   def __str__(self):
     return self.name
+  
+  def get_absolute_url(self):
+    return reverse('detail_view', args=[str(self.id)])
